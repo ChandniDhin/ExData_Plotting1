@@ -6,8 +6,8 @@
 febPowerConsumpData<- read.table("./Data/01-02_Feb_2007.txt", sep = ";", header = T, na.strings = "?")
 
 ##converting the Date and Time variables to Date/Time
-x <- paste( febPowerConsumpData$Date,  febPowerConsumpData$Time)
-febPowerConsumpData$DateTime <- strptime(x, "%d/%m/%y %H:%M:%S")
+x<- paste( febPowerConsumpData$Date,  febPowerConsumpData$Time)
+febPowerConsumpData$DateTime <- strptime(x, "%d/%m/%Y %H:%M:%S")
 
 ##Constructing a png file 480 X 480
 png("plot1.png",width=480, height=480)
